@@ -1,0 +1,20 @@
+<mvc:View controllerName="northwindnew.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id = "page1" title="{i18n>title}">
+        <content>
+        
+        <List id="_IDGenList1" items= "{myjson>/myProducts}" >
+        <items>
+        <StandardListItem id="_IDGenStandardListItem34567" title= "{myjson>ProductName}" description= "{myjson>QuantityPerUnit}" 
+        info="{myjson>UnitPrice}"
+        press= "onPress"
+        type="Navigation">
+
+
+        </StandardListItem>
+        </items>
+        </List>
+        </content>
+    </Page>
+</mvc:View>

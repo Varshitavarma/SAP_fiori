@@ -1,0 +1,13 @@
+<mvc:View
+    controllerName="northwindnew.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+    
+    <Page id="idPage" title="Product Details">
+        <content>
+            <Text id="_IDGenText3" text="" />
+            <Text id="_IDGenText2" text="" />
+        </content>
+    </Page>
+</mvc:View>
