@@ -1,0 +1,12 @@
+<mvc:View
+    controllerName="northwindnew.controller.Navigate"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    displayBlock="true">
+    
+    <Page id="idPage" title="Button Navigate">
+        <content>
+            <Text id="_IDGenText1" text="This is the new navigation page" />
+        </content>
+    </Page>
+</mvc:View>

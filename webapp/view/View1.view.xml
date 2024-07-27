@@ -3,7 +3,12 @@
     xmlns="sap.m">
     <Page id = "page1" title="{i18n>title}">
         <content>
-        
+        <VBox id="_IDGenVBox1" >
+        <Button id = "btn1" text="Navigate to page1" type="Accept" press="onButton1"/>
+        <Button id = "btn2" text="Page1" type="Accept" press="onButton2"/>
+        </VBox>
+
+
         <List id="_IDGenList1" items= "{myjson>/myProducts}" >
         <items>
         <StandardListItem id="_IDGenStandardListItem34567" title= "{myjson>ProductName}" description= "{myjson>QuantityPerUnit}" 

@@ -28,15 +28,25 @@ sap.ui.define([
             });
         },
         onPress: function (oEvent) {
-            //var oItem = oEvent.getSource();
+            var oItem = oEvent.getSource();
             var oRouter = UIComponent.getRouterFor(this);
             //var itemClicked = oItem.getBindingContext("myProducts").getPath().substr(1);
-            //var itemClicked = oItem.getBindingContextPath().substr(1);
-            //itemClicked = itemClicked.replace("/", "@");
-                oRouter.navTo("RouteDetail");
+           var itemClicked = oItem.getBindingContextPath().substr(1);
+            itemClicked = itemClicked.replace("/", "@");
+                oRouter.navTo("RouteDetail",{
+                    holder : itemClicked
+                });
 
                 // var oRouter = this.getRouter();
                 // var selectedItem;
-            }
+            },
+            onButton1: function (oEvent) {
+                var oRouter = UIComponent.getRouterFor(this);
+                    oRouter.navTo("RouteNavigate");
+                }, 
+                onButton2: function (oEvent) {
+                    var oRouter = UIComponent.getRouterFor(this);
+                        oRouter.navTo("RouteDetail");
+                    },   
     });
 });

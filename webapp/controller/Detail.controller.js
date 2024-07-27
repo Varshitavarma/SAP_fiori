@@ -11,17 +11,17 @@ sap.ui.define([
 function (Controller, UIComponent) {
     "use strict";
  
-    return Controller.extend("northwindnew.view.Detail", {
+    return Controller.extend("northwindnew.controller.Detail", {
         onInit: function () {
-            // var oRouter = UIComponent.getRouterFor(this);
-            // oRouter.getRoute("RouteDetail").attachPatternMatched(this._ondetails, this);
-        }
+             var oRouter = UIComponent.getRouterFor(this);
+             oRouter.getRoute("RouteDetail").attachPatternMatched(this._onHolder, this);
+        },
  
-        // _ondetails: function (oEvent) {
-        //     this.getView().bindElement({
-        //         path: "/" + oEvent.getParameter("arguments").detail.replace("@", "/"),
-        //         model: "myjson"
-        //     });
-        // },
+         _onHolder: function (oEvent) {  //any convention a private function we use underscore
+             this.getView().bindElement({
+                 path: "/" + oEvent.getParameter("arguments").holder.replace("@", "/"),
+                 model: "myjson"
+             });
+         },
     });
 });

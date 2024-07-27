@@ -106,11 +106,18 @@
         },
         {
         "name" : "RouteDetail",
-        "pattern" : "detail",
+        "pattern" : "detail/{holder}",
         "target" : [
           "TargetDetail"
         ]
-        }
+        },
+        {
+          "name" : "RouteNavigate",
+          "pattern" : "Naviagate",
+          "target" : [
+            "TargetDetail1"
+          ]
+          }
       ],
       "targets": {
         "TargetView1": {
@@ -126,6 +133,13 @@
           "clearControlAggregation": false,
           "viewId": "Detail",
           "viewName": "Detail"
+        },
+        "TargetDetail1" : {
+          "viewType": "XML",
+          "transition" : "slide",
+          "clearControlAggregation": false,
+          "viewId": "Navigate",
+          "viewName": "Navigate"
         }
       }
     },

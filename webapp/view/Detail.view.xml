@@ -6,8 +6,8 @@
     
     <Page id="idPage" title="Product Details">
         <content>
-            <Text id="text1" text="{myjson>ProductId}" />
-            <Text id="iDGenText" text="{myjson>ProductName}" />
+            <Text id="_IDGenText1" text="{myjson>ProductID}" />
+            <Text id="_IDGenText2" text="{myjson>ProductName}" />
         </content>
     </Page>
 </mvc:View>
